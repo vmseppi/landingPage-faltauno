@@ -1,7 +1,14 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Falta Uno",
+  "name": "Falta Uno - Organiza partidos deportivos",
+  "description": "Organiza partidos de fútbol, pádel, tenis y basket en segundos. Encuentra jugadores cerca de ti.",
   "icons": [
+    {
+      "src": "images/F.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
     {
       "src": "favicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
@@ -20,6 +27,18 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#0160A8",
+  "background_color": "#ffffff",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "es",
+  "categories": ["sports", "lifestyle", "social"],
+  "screenshots": [
+    {
+      "src": "images/phones.svg",
+      "sizes": "1280x720",
+      "type": "image/svg+xml",
+      "form_factor": "wide"
+    }
+  ]
 }

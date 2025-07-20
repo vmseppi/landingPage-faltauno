@@ -68,13 +68,15 @@ function App() {
                 quieras y donde quieras.
               </p>
 
-              <p className="hidden md:block text-[20px] max-w-771px] leading-[40px] font-medium font-['Lexend_Exa'] leading-[100%] text-white mb-[100px] mt-[54px] ">
+              <p className="hidden md:block text-[20px] max-w-771px] leading-[40px] font-medium font-['Lexend_Exa'] l text-white mb-[100px] mt-[54px]">
                 Fútbol, pádel, tenis, basket... Organiza o únete a <br />{" "}
                 partidos cerca de ti, con quien quieras y donde quieras.
               </p>
 
               <a
                 href="mailto:soportefaltauno@gmail.com?subject=Hola%20desde%20Falta%20Uno&body=Me%20gustaría%20saber%20más%20sobre%20la%20app."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-white text-black font-lexend font-bold text-lg md:text-xl px-[25.78px] py-[17.19px] md:px-8 md:py-4 rounded-[51.56px] w-[240.56px] h-[57.37px] md:w-auto md:h-auto leading-none mt-[40px] relative z-10"
               >
                 Contacta
@@ -305,6 +307,8 @@ function App() {
             </h2>
             <a
               href="mailto:soportefaltauno@gmail.com?subject=Hola%20desde%20Falta%20Uno&body=Me%20gustaría%20saber%20más%20sobre%20la%20app."
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-white text-black font-lexend font-black text-lg px-[25.78px] py-[17.19px] rounded-[51.56px] w-[240.56px] h-[57.37px] leading-none mt-10 relative z-10 "
             >
               Contacta

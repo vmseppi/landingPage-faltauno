@@ -31,7 +31,7 @@ function App() {
       <div className="min-h-screen bg-custom-gradient">
         {/* Header con fondo de imagen y overlay azul */}
         <header
-          className="relative min-h-[418px] md:min-h-[600px] flex items-center justify-center md:justify-start backdrop-blur-sm"
+          className="relative min-h-[418px] md:min-h-[600px] md:max-h-[767px] flex items-center justify-center md:justify-start backdrop-blur-sm"
           style={{
             backgroundImage: `linear-gradient(rgba(1, 82, 141, 0.8), rgba(1, 82, 141, 0.8)), url('images/futbol-players.svg')`,
             backgroundSize: "cover",
@@ -39,28 +39,47 @@ function App() {
             backgroundRepeat: "no-repeat",
           }}
         >
-          <div className="container mx-auto px-7 md:px-48 py-8 md:py-16 flex flex-col items-center md:items-start relative z-10">
-            <img
-              src="images/logo.svg"
-              alt="Falta Uno - Encuentra jugadores para tu partido"
-              className="mb-[20px] w-[328px] h-[127px] md:w-[400px] md:h-[155px] relative z-20"
-            />
-            <h1 className="text-white font-lexend font-bold text-xl md:text-3xl lg:text-4xl text-center md:text-left uppercase leading-tight mb-4 relative z-10">
-              Organiza tu partido
-              <br className="md:hidden" />
-              <span className="md:inline"> </span>
-              en segundos.
-            </h1>
-            <p className="text-white text-center md:text-left mb-4 w-[353px] md:w-auto md:max-w-[600px] h-[74px] md:h-auto leading-7 md:leading-8 font-lexend font-medium text-sm md:text-xl relative z-10">
-              Fútbol, pádel, tenis, basket... Organiza
-              <br />
-              o únete a partidos cerca de ti, con quien
-              <br />
-              quieras y donde quieras.
-            </p>
-            <button className="bg-white text-black font-lexend font-bold text-lg md:text-xl px-[25.78px] py-[17.19px] md:px-8 md:py-4 rounded-[51.56px] w-[240.56px] h-[57.37px] md:w-auto md:h-auto leading-none mt-[40px] relative z-10">
-              Únete al partido
-            </button>
+          <div className="container mx-auto px-7 md:px-48 py-8 md:py-48 flex flex-col items-center md:items-start relative z-10">
+            <div className="max-w-[740px]">
+              <div className="flex items-center mb-[20px]">
+                <div className="whitespace-nowrap">
+                  <span className="inline text-[40.35px] md:text-[80px] text-white leading-[100%] font-semibold text-center uppercase font-['Lexend_Exa']">
+                    FALTA<span className="text-[#03DAC5]">UNO</span>
+                  </span>
+                </div>
+
+                <img
+                  src="images/F.svg"
+                  alt="Falta Uno Logo"
+                  className="ml-[9px] w-[57px] h-[57px] md:w-[124px] md:h-[124px]"
+                />
+              </div>
+              <h1 className="text-white font-lexend font-bold text-xl md:text-[30px] lg:text-[30px] text-center md:text-left uppercase leading-tight mb-4 relative z-10">
+                Organiza tu partido
+                <br className="md:hidden" />
+                <span className="md:inline"> </span>
+                en segundos.
+              </h1>
+              <p className="text-white text-center md:text-left mb-4 w-[353px] md:w-auto md:max-w-[600px] h-[74px] md:h-auto leading-7 md:leading-8 font-lexend font-medium text-sm md:text-xl relative z-10 md:hidden">
+                Fútbol, pádel, tenis, basket... Organiza
+                <br />
+                o únete a partidos cerca de ti, con quien
+                <br />
+                quieras y donde quieras.
+              </p>
+
+              <p className="hidden md:block text-[20px] max-w-771px] leading-[40px] font-medium font-['Lexend_Exa'] leading-[100%] text-white mb-[100px] mt-[54px] ">
+                Fútbol, pádel, tenis, basket... Organiza o únete a <br />{" "}
+                partidos cerca de ti, con quien quieras y donde quieras.
+              </p>
+
+              <a
+                href="mailto:soportefaltauno@gmail.com?subject=Hola%20desde%20Falta%20Uno&body=Me%20gustaría%20saber%20más%20sobre%20la%20app."
+                className="bg-white text-black font-lexend font-bold text-lg md:text-xl px-[25.78px] py-[17.19px] md:px-8 md:py-4 rounded-[51.56px] w-[240.56px] h-[57.37px] md:w-auto md:h-auto leading-none mt-[40px] relative z-10"
+              >
+                Contacta
+              </a>
+            </div>
           </div>
         </header>
 
@@ -97,10 +116,13 @@ function App() {
                 <div className="flex-1 max-w-[500px]">
                   <p className="font-lexend font-medium text-xl leading-8 text-black mb-8">
                     Con{" "}
-                    <span className="font-medium text-[#086EC1]">FALTA</span>
-                    <span className="text-[#03DAC5]">UNO</span> crea de forma
-                    rápida y sencilla el partido que tu quieras, elige el
-                    deporte, la fecha, el lugar y el número de jugadores.
+                    <span className="font-semibold text-[#086EC1]">FALTA</span>
+                    <span className="text-[#03DAC5] font-semibold">
+                      UNO
+                    </span>{" "}
+                    crea de forma rápida y sencilla el partido que tu quieras,
+                    elige el deporte, la fecha, el lugar y el número de
+                    jugadores.
                   </p>
                   <button className="flex items-center text-[#03DAC5] font-lexend font-black text-3xl leading-none">
                     Organiza tu partido
@@ -265,7 +287,7 @@ function App() {
 
         {/* Footer con fondo de imagen y overlay azul */}
         <footer
-          className="w-[390px] h-[298px] md:w-full mx-auto flex items-center justify-center backdrop-blur-sm"
+          className="w-[390px] h-[298px] md:w-full mx-auto flex items-center justify-center backdrop-blur-sm md:pb-[100px]"
           style={{
             backgroundImage: `linear-gradient(rgba(1, 82, 141, 0.8), rgba(1, 82, 141, 0.8)), url('images/couple-playing-tennis.svg')`,
             backgroundSize: "cover",
@@ -273,17 +295,20 @@ function App() {
             backgroundRepeat: "no-repeat",
           }}
         >
-          <div className="container mx-auto text-center px-7 relative z-10">
+          <div className="container mx-auto text-center px-7 relative z-10 ">
             <h2 className="font-lexend font-black text-[22px] leading-7 text-white mb-8 relative z-10 md:hidden">
               Empieza a jugar <br />
               hoy mismo.
             </h2>
-            <h2 className="hidden md:block font-lexend font-black text-[22px] leading-7 text-white mb-8 relative z-10 ">
+            <h2 className="hidden md:block font-lexend font-black text-[22px] leading-7 text-white mb-8 relative z-10 md:my-[100px]">
               Empieza a jugar hoy mismo.
             </h2>
-            <button className="bg-white text-black font-lexend font-black text-lg px-[25.78px] py-[17.19px] rounded-[51.56px] w-[240.56px] h-[57.37px] leading-none mt-10 relative z-10">
-              Descargar
-            </button>
+            <a
+              href="mailto:soportefaltauno@gmail.com?subject=Hola%20desde%20Falta%20Uno&body=Me%20gustaría%20saber%20más%20sobre%20la%20app."
+              className="bg-white text-black font-lexend font-black text-lg px-[25.78px] py-[17.19px] rounded-[51.56px] w-[240.56px] h-[57.37px] leading-none mt-10 relative z-10 "
+            >
+              Contacta
+            </a>
           </div>
         </footer>
       </div>

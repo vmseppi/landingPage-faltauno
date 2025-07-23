@@ -6,8 +6,7 @@ function App() {
     "@context": "https://schema.org",
     "@type": "WebApplication",
     name: "Falta Uno",
-    description:
-      "Plataforma para organizar partidos deportivos de fútbol, pádel, tenis y basket en segundos. Encuentra jugadores cerca de ti y reserva pistas públicas o privadas.",
+    description: "Plataforma para encontrar jugadores para partidos deportivos",
     url: "https://tudominio.com",
     applicationCategory: "SportsApplication",
     operatingSystem: "Web",
@@ -19,80 +18,14 @@ function App() {
     creator: {
       "@type": "Organization",
       name: "Falta Uno",
-      url: "https://tudominio.com",
-      logo: "https://tudominio.com/images/F.svg",
     },
-    featureList: [
-      "Organizar partidos en 30 segundos",
-      "Encontrar jugadores fácilmente",
-      "Reservar pistas públicas o privadas",
-      "Múltiples deportes: fútbol, pádel, tenis, basket",
-    ],
-    screenshot: "https://tudominio.com/images/phones.svg",
-    softwareVersion: "1.0.0",
-    inLanguage: "es-ES",
-    audience: {
-      "@type": "Audience",
-      audienceType: "Deportistas y aficionados al deporte",
-    },
-  };
-
-  // Organization structured data
-  const organizationData = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    name: "Falta Uno",
-    url: "https://tudominio.com",
-    logo: "https://tudominio.com/images/F.svg",
-    description: "Plataforma para organizar partidos deportivos",
-    contactPoint: {
-      "@type": "ContactPoint",
-      contactType: "customer service",
-      email: "soportefaltauno@gmail.com",
-    },
-    sameAs: [
-      "https://facebook.com/faltauno",
-      "https://twitter.com/faltauno",
-      "https://instagram.com/faltauno",
-    ],
-  };
-
-  // Local Business structured data
-  const localBusinessData = {
-    "@context": "https://schema.org",
-    "@type": "SportsActivityLocation",
-    name: "Falta Uno",
-    description: "Plataforma para organizar partidos deportivos",
-    url: "https://tudominio.com",
-    sport: ["Fútbol", "Pádel", "Tenis", "Basketball"],
-    amenityFeature: [
-      {
-        "@type": "LocationFeatureSpecification",
-        name: "Pistas públicas",
-        value: true,
-      },
-      {
-        "@type": "LocationFeatureSpecification",
-        name: "Pistas privadas",
-        value: true,
-      },
-    ],
   };
 
   return (
     <>
-      {/* Structured Data for SEO */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationData) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessData) }}
       />
 
       <div className="min-h-screen bg-custom-gradient">
@@ -145,7 +78,6 @@ function App() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-white text-black font-lexend font-bold text-lg md:text-xl px-[25.78px] py-[17.19px] md:px-8 md:py-4 rounded-[51.56px] w-[240.56px] h-[57.37px] md:w-auto md:h-auto leading-none mt-[40px] flex items-center justify-center"
-                aria-label="Contactar con Falta Uno por email"
               >
                 Contacta
               </a>
@@ -165,10 +97,7 @@ function App() {
                     de forma rápida y sencilla el partido que tu quieras, elige
                     el deporte, la fecha, el lugar y el número de jugadores.
                   </p>
-                  <button
-                    className="flex items-center justify-center mx-auto text-[#03DAC5] font-lexend font-black text-lg leading-none"
-                    aria-label="Organizar partido deportivo"
-                  >
+                  <button className="flex items-center justify-center mx-auto text-[#03DAC5] font-lexend font-black text-lg leading-none">
                     Organiza tu partido
                     <MoveRight className="ml-2 w-4 h-4" />
                   </button>
@@ -177,7 +106,7 @@ function App() {
                 <div className="flex justify-center">
                   <img
                     src="images/phones.svg"
-                    alt="Capturas de pantalla de la aplicación Falta Uno mostrando la interfaz para organizar partidos deportivos"
+                    alt="Falta Uno App Screenshots"
                     className="w-full max-w-md"
                   />
                 </div>
@@ -196,10 +125,7 @@ function App() {
                     elige el deporte, la fecha, el lugar y el número de
                     jugadores.
                   </p>
-                  <button
-                    className="flex items-center text-[#03DAC5] font-lexend font-black text-3xl leading-none"
-                    aria-label="Organizar partido deportivo"
-                  >
+                  <button className="flex items-center text-[#03DAC5] font-lexend font-black text-3xl leading-none">
                     Organiza tu partido
                     <MoveRight className="ml-3 w-6 h-6" />
                   </button>
@@ -208,7 +134,7 @@ function App() {
                 <div className="flex-1 flex justify-center">
                   <img
                     src="images/phones.svg"
-                    alt="Capturas de pantalla de la aplicación Falta Uno mostrando la interfaz para organizar partidos deportivos"
+                    alt="Falta Uno App Screenshots"
                     className="w-full"
                   />
                 </div>
@@ -249,10 +175,7 @@ function App() {
                   {/* Caja 1 - Cuando quieras */}
                   <div className="flex items-start space-x-4">
                     <div className="flex-shrink-0">
-                      <Calendar
-                        className="w-9 h-10 text-[#0087ED]"
-                        aria-hidden="true"
-                      />
+                      <Calendar className="w-9 h-10 text-[#0087ED]" />
                     </div>
                     <div>
                       <h3 className="font-lexend font-bold text-base leading-none text-black mb-3">
@@ -268,10 +191,7 @@ function App() {
                   {/* Caja 2 - Donde quieras */}
                   <div className="flex items-start space-x-4">
                     <div className="flex-shrink-0">
-                      <MapPin
-                        className="w-9 h-10 text-[#0087ED]"
-                        aria-hidden="true"
-                      />
+                      <MapPin className="w-9 h-10 text-[#0087ED]" />
                     </div>
                     <div className="max-w-[222px] max-h-[60px]">
                       <h3 className="font-lexend font-bold text-base leading-none text-black mb-3">
@@ -286,7 +206,7 @@ function App() {
                 <div className="flex justify-center mt-10">
                   <img
                     src="images/F.svg"
-                    alt="Logo de Falta Uno"
+                    alt="Falta Uno Logo"
                     className="w-[92px] h-[92px]"
                   />
                 </div>
@@ -298,7 +218,7 @@ function App() {
                 <div className="flex-shrink-0">
                   <img
                     src="images/F.svg"
-                    alt="Logo de Falta Uno"
+                    alt="Falta Uno Logo"
                     className="w-[180px] h-[180px] mr-[107px]"
                   />
                 </div>
@@ -333,10 +253,7 @@ function App() {
                     {/* Caja 1 - Cuando quieras */}
                     <div className="flex items-start space-x-4">
                       <div className="flex-shrink-0">
-                        <Calendar
-                          className="w-[50px] h-[50px] text-[#0087ED]"
-                          aria-hidden="true"
-                        />
+                        <Calendar className="w-[50px] h-[50px] text-[#0087ED]" />
                       </div>
                       <div>
                         <h3 className="font-lexend font-bold text-[24px] leading-none text-black mb-3">
@@ -351,10 +268,7 @@ function App() {
                     {/* Caja 2 - Donde quieras */}
                     <div className="flex items-start space-x-4">
                       <div className="flex-shrink-0">
-                        <MapPin
-                          className="w-[50px] h-[50px] text-[#0087ED]"
-                          aria-hidden="true"
-                        />
+                        <MapPin className="w-[50px] h-[50px] text-[#0087ED]" />
                       </div>
                       <div>
                         <h3 className="font-lexend font-bold text-[24px] leading-none text-black mb-3">
@@ -395,7 +309,6 @@ function App() {
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white text-black font-lexend font-black text-lg px-[25.78px] py-[17.19px] rounded-[51.56px] md:w-[240.56px] md:h-[57.37px] leading-none relative mt-[40px]"
-              aria-label="Contactar con Falta Uno por email"
             >
               Contacta
             </a>
